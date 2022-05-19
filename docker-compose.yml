@@ -1,0 +1,8 @@
+ version: "3" 
+
+ services:
+   orion:
+     image: fiware/orion
+     ports:
+       - "1026:1026"
+     command: -dbhost "mongo-perf-testing.mongo.cosmos.azure.com:10255" -db "fiver_db" -dbuser "mongo-perf-testing" -dbpwd "vUcNuAU3nvhifP3cGsgx3HjTuX3seqq6CA6jHO9OlQfktfP5G8eG4FSeJKBPv89F5ydKxsnhtSstRuJKSDDFJg==" -dbSSL -dbDisableRetryWrites -logLevel DEBUG -t 100

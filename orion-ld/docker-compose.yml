@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  # Orion is the context broker
+  orion:
+    image: fiware/orion-ld:latest
+    hostname: orion
+    container_name: fiware-orion
+    expose:
+      - "1026"
+    ports:
+      - "1026:1026" 
+    command: -dbhost "mongo-perf-testing.mongo.cosmos.azure.com:10255" -db "fiver_ld" -dbuser "mongo-perf-testing" -dbpwd "vUcNuAU3nvhifP3cGsgx3HjTuX3seqq6CA6jHO9OlQfktfP5G8eG4FSeJKBPv89F5ydKxsnhtSstRuJKSDDFJg==" -logLevel DEBUG -t 0-255 -experimental2
+    healthcheck:
+      test: curl --fail -s http://orion:1026/version || exit 1
+      
+volumes:
+  mongo-db: ~
