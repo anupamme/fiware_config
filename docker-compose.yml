@@ -5,4 +5,4 @@
      image: fiware/orion
      ports:
        - "1026:1026"
-     command: -dbhost "mongo-perf-testing.mongo.cosmos.azure.com:10255" -db "fiver_db" -dbuser "mongo-perf-testing" -dbpwd "vUcNuAU3nvhifP3cGsgx3HjTuX3seqq6CA6jHO9OlQfktfP5G8eG4FSeJKBPv89F5ydKxsnhtSstRuJKSDDFJg==" -dbSSL -dbDisableRetryWrites -logLevel DEBUG -t 100
+     command: -dbhost "ola-mongo-east-2.mongo.cosmos.azure.com:10255" -db "fiver_db" -dbuser "ola-mongo-east-2" -dbpwd "4sJXSYukOF1O4QkhnUycOxyxjZ4a6MtVPL6U7xmpsryqtocXPqAsMPckszwRHWEf9YWVzps7iV71yds45wTyGg==" -logLevel DEBUG -t 100
